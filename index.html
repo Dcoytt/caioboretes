@@ -3,6 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="favicon.png">
 <script src="./support.js"></script>
 </head>
 <body>
@@ -229,7 +231,7 @@ input,button,select,textarea{font-family:inherit;}
             <div style="color:var(--gold);font-size:18px;letter-spacing:2px;">★★★★★</div>
             <p style="font-size:16px;line-height:1.55;color:var(--ink);margin:12px 0 18px;flex:1;">“{{ t.texto }}”</p>
             <div style="display:flex;align-items:center;gap:12px;">
-              <div style="width:44px;height:44px;border-radius:50%;background:repeating-linear-gradient(45deg,#e4e9ee 0 7px,#eef2f6 7px 14px);flex:none;"></div>
+              <img src="{{ t.foto }}" alt="{{ t.nome }}" loading="lazy" style="width:50px;height:50px;border-radius:50%;object-fit:cover;flex:none;border:2px solid var(--gold);box-shadow:0 2px 8px rgba(0,0,0,.12);">
               <div style="line-height:1.25;">
                 <div style="font-weight:700;font-size:15px;color:var(--navy);">{{ t.nome }}</div>
                 <div style="font-size:13px;color:var(--muted);">{{ t.local }}</div>
@@ -512,9 +514,9 @@ class Component extends DCLogic {
     ];
 
     const depoimentos = [
-      { texto: 'Recebi de volta mais de R$ 40 mil que eu nem sabia que tinha direito. E resolvemos tudo pelo celular, sem eu sair de casa.', nome: 'Maria L., 68 anos', local: 'Recife / PE' },
-      { texto: 'Sou cardiopata e parei de pagar imposto na aposentadoria. O atendimento foi atencioso e explicaram tudo com paciência.', nome: 'José R., 71 anos', local: 'Curitiba / PR' },
-      { texto: 'Cuidaram de todo o processo do meu pai, que tem Parkinson. Não precisamos ir a lugar nenhum. Recomendo de olhos fechados.', nome: 'Ana P. (filha de cliente)', local: 'São Paulo / SP' },
+      { texto: 'Recebi de volta mais de R$ 40 mil que eu nem sabia que tinha direito. E resolvemos tudo pelo celular, sem eu sair de casa.', nome: 'Maria L., 68 anos', local: 'Recife / PE', foto: 'assets/depo-maria.jpg' },
+      { texto: 'Sou cardiopata e parei de pagar imposto na aposentadoria. O atendimento foi atencioso e explicaram tudo com paciência.', nome: 'José R., 71 anos', local: 'Curitiba / PR', foto: 'assets/depo-jose.png' },
+      { texto: 'Cuidaram de todo o processo do meu pai, que tem Parkinson. Não precisamos ir a lugar nenhum. Recomendo de olhos fechados.', nome: 'Ana P. (filha de cliente)', local: 'São Paulo / SP', foto: 'assets/depo-ana.png' },
     ];
 
     const escritorio = this.props.escritorio || 'Caio Boretes Advocacia';
